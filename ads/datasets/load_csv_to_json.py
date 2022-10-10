@@ -39,9 +39,10 @@ def replace_values(value):
     """Преобразование цифр и логических значений в требуемые типы"""
     if value.isdigit():
         return int(value)
-    if value == 'TRUE' or value == 'FALSE':
-        return bool(value)
-
+    if value == 'FALSE':
+        return False
+    if value == 'TRUE':
+        return True
     return value
 
 
