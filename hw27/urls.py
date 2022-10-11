@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ads.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ad/', AdsAPIList.as_view()),
+    path('ad/<int:pk>/', AdAPIUpdate.as_view()),
+    path('cat/', CatsAPIList.as_view()),
+    path('cat/<int:pk>/', CatAPIUpdate.as_view()),
 ]
